@@ -1,6 +1,5 @@
-# @tracktor/react-utils
+# @getsoren/react-utils
 
-[![npm version](https://badge.fury.io/js/@tracktor%2Freact-utils.svg)](https://badge.fury.io/js/@tracktor%2Freact-utils)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 > A comprehensive collection of modern React utilities and custom hooks to accelerate your development workflow.
@@ -9,22 +8,22 @@
 
 ```bash
 # bun
-bun add @tracktor/react-utils
+bun add @getsoren/react-utils
 
 # npm
-npm install @tracktor/react-utils
+npm install @getsoren/react-utils
 
 # yarn
-yarn add @tracktor/react-utils
+yarn add @getsoren/react-utils
 
 # pnpm
-pnpm add @tracktor/react-utils
+pnpm add @getsoren/react-utils
 ```
 
 ## 🚀 Quick Start
 
 ```typescript
-import { useInputState, capitalize, phoneNumberAdapter } from '@tracktor/react-utils';
+import { useInputState, capitalize, phoneNumberAdapter } from '@getsoren/react-utils';
 
 function App() {
   const [email, onEmailChange] = useInputState('');
@@ -287,7 +286,7 @@ const { isPlaying, volume, play, pause, toggle, stop, setVolume } = useAudio('/a
 #### Type Validation
 
 ```typescript
-import { isArray, isObject, isString, isNumber, isBoolean, isFunction, isRef } from '@tracktor/react-utils';
+import { isArray, isObject, isString, isNumber, isBoolean, isFunction, isRef } from '@getsoren/react-utils';
 
 if (isArray(data)) {
   // TypeScript knows data is an array
@@ -303,7 +302,7 @@ if (isObject(value)) {
 #### Object Manipulation
 
 ```typescript
-import { removeObjectProperty, isDeepEqualObject, getObjectValue } from '@tracktor/react-utils';
+import { removeObjectProperty, isDeepEqualObject, getObjectValue } from '@getsoren/react-utils';
 
 // Remove property without mutation
 const newObj = removeObjectProperty(originalObj, 'propertyToRemove');
@@ -320,7 +319,7 @@ getObjectValue(obj, 'car.color.red', 'not found');   // "not found"
 #### String Manipulation
 
 ```typescript
-import { capitalize, capitalizeWords } from '@tracktor/react-utils';
+import { capitalize, capitalizeWords } from '@getsoren/react-utils';
 
 capitalize('hello world');     // "Hello world"
 capitalizeWords('hello world'); // "Hello World"
@@ -329,7 +328,7 @@ capitalizeWords('hello world'); // "Hello World"
 #### Number Conversion
 
 ```typescript
-import { toNumberOrZero } from '@tracktor/react-utils';
+import { toNumberOrZero } from '@getsoren/react-utils';
 
 toNumberOrZero('42');    // 42
 toNumberOrZero('abc');   // 0
@@ -340,7 +339,7 @@ toNumberOrZero(true);    // 0 (booleans return 0)
 #### Platform Detection
 
 ```typescript
-import { isMac } from '@tracktor/react-utils';
+import { isMac } from '@getsoren/react-utils';
 
 // Detects macOS at runtime (SSR-safe: returns false on the server)
 const shortcut = isMac() ? '⌘ + K' : 'Ctrl + K';
@@ -456,7 +455,7 @@ import {
   phoneNumberAdapter,
   capitalize,
   formatCreditCardNumber
-} from '@tracktor/react-utils';
+} from '@getsoren/react-utils';
 
 function ContactForm() {
   const [name, onNameChange] = useInputState('');
@@ -525,7 +524,7 @@ function ContactForm() {
 
 ```typescript
 import React, { useEffect, useState } from 'react';
-import { useDebounce, useInputState } from '@tracktor/react-utils';
+import { useDebounce, useInputState } from '@getsoren/react-utils';
 
 function SearchComponent() {
   const [query, onQueryChange] = useInputState('');
@@ -576,7 +575,7 @@ function SearchComponent() {
 
 ```typescript
 import React, { useRef } from 'react';
-import { useInView, useIntersectionObserver } from '@tracktor/react-utils';
+import { useInView, useIntersectionObserver } from '@getsoren/react-utils';
 
 function VisibilityExample() {
   const simpleRef = useRef(null);
@@ -684,10 +683,10 @@ This project is licensed under the ISC License. See the [LICENSE](LICENSE) file 
 
 ## 📞 Support
 
-- 🐛 [Report a bug](https://github.com/Tracktor/react-utils/issues)
-- 💡 [Request a feature](https://github.com/Tracktor/react-utils/issues)
-- 📖 [Documentation](https://github.com/Tracktor/react-utils#readme)
-- 💬 [Discussions](https://github.com/Tracktor/react-utils/discussions)
+- 🐛 [Report a bug](https://github.com/getsoren/react-utils/issues)
+- 💡 [Request a feature](https://github.com/getsoren/react-utils/issues)
+- 📖 [Documentation](https://github.com/getsoren/react-utils#readme)
+- 💬 [Discussions](https://github.com/getsoren/react-utils/discussions)
 
 ## 🚀 What's Next?
 

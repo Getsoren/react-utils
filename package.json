@@ -1,5 +1,5 @@
 {
-  "name": "@tracktor/react-utils",
+  "name": "@getsoren/react-utils",
   "description": "React data table and react data grid",
   "version": "1.30.0",
   "private": false,
@@ -13,13 +13,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com/Tracktor/react-utils.git"
+    "url": "git+https://github.com/getsoren/react-utils.git"
   },
   "author": "Mickaël Austoni",
   "bugs": {
-    "url": "https://github.com/Tracktor/react-utils/issues"
+    "url": "https://github.com/getsoren/react-utils/issues"
   },
-  "homepage": "https://github.com/Tracktor/react-utils#readme",
+  "homepage": "https://github.com/getsoren/react-utils#readme",
   "exports": {
     ".": {
       "types": "./dist/main.d.ts",
@@ -35,13 +35,14 @@
     "lint:fix": "bunx biome check . --write",
     "preview": "bunx vite preview",
     "test": "bunx vitest",
-    "prepare": "bun run build && bunx husky install"
+    "prepare": "bun run build && bunx husky install",
+    "release": "commit-and-tag-version"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.5.1",
-    "@tracktor/biome-config-react": "^1.4.0",
+    "@getsoren/biome-config-react": "^1.4.0",
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18.2.13",
     "@vitejs/plugin-react": "^6.0.1",
@@ -53,7 +54,8 @@
     "unplugin-dts": "^1.0.0-beta.6",
     "vite": "^8.0.3",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^1.6.1"
+    "vitest": "^1.6.1",
+    "commit-and-tag-version": "^12.6.0"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
@@ -63,5 +65,9 @@
     "react",
     "react hook",
     "react utils"
-  ]
+  ],
+  "commit-and-tag-version": {
+    "releaseCommitMessageFormat": "chore(release): {{currentTag}} [skip ci]",
+    "tagPrefix": ""
+  }
 }
