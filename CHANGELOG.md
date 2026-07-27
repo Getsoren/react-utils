@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.32.1](https://github.com/getsoren/react-utils/compare/1.32.0...1.32.1) (2026-07-27)
+
+
+### Bug Fixes
+
+* **phoneNumberAdapter:** nullish input, free-text passthrough, no silent truncation, correct international prefix ([180e4c0](https://github.com/getsoren/react-utils/commit/180e4c097c2e9200eb376d5f1526c17b0a8cfa88))
+
 ## [1.32.0](https://github.com/getsoren/react-utils/compare/1.31.0...1.32.0) (2026-07-27)
 
 
