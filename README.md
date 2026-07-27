@@ -74,6 +74,28 @@ const [data, setData] = useLocalStorage('data', [], {
 
 ---
 
+#### `useSessionStorage(key, initialValue?, options?)`
+Same API as `useLocalStorage`, but backed by sessionStorage: the value survives component unmounts and page reloads, and is cleared when the tab is closed. Perfect for drafts and other per-tab transient state.
+
+```typescript
+const [draft, setDraft, removeDraft] = useSessionStorage('form-draft', { title: '' });
+
+// Persist as the user types…
+setDraft({ title: 'My title' });
+
+// …and clear it once submitted
+removeDraft();
+```
+
+**Parameters:**
+- `key`: sessionStorage key
+- `initialValue`: Initial value (optional)
+- `options`: Serialization options (optional)
+
+**Returns:** `[value, setValue, removeValue]`
+
+---
+
 #### `useInputState(initialValue)`
 Simplifies input state management with automatic event handling.
 
