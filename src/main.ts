@@ -22,6 +22,8 @@ export * from "@/hooks/useLocalStorage/useLocalStorage";
 export { default as useLocalStorage } from "@/hooks/useLocalStorage/useLocalStorage";
 export * from "@/hooks/useScript/useScript";
 export { default as useScript } from "@/hooks/useScript/useScript";
+export * from "@/hooks/useSessionStorage/useSessionStorage";
+export { default as useSessionStorage } from "@/hooks/useSessionStorage/useSessionStorage";
 export * from "@/hooks/useToggle/useToggle";
 export { default as useToggle } from "@/hooks/useToggle/useToggle";
 export * from "@/hooks/useWindowSize/useWindowSize";
