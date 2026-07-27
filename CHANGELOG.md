@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.32.0](https://github.com/getsoren/react-utils/compare/1.31.0...1.32.0) (2026-07-27)
+
+
+### Features
+
+* add useSessionStorage ([c53066b](https://github.com/getsoren/react-utils/commit/c53066b08763f5111c299cf2add1f70732c379b5))
+
 ## [1.31.0](https://github.com/getsoren/react-utils/compare/1.30.0...1.31.0) (2026-07-27)
 
 
