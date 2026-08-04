@@ -66,5 +66,7 @@ export * from "@/utils/platform/isMac";
 export { default as isMac } from "@/utils/platform/isMac";
 export * from "@/utils/string/capitalize";
 export { default as capitalize } from "@/utils/string/capitalize";
+export * from "@/utils/string/capitalizeAddress/capitalizeAddress";
+export { default as capitalizeAddress } from "@/utils/string/capitalizeAddress/capitalizeAddress";
 export * from "@/utils/string/capitalizeWords";
 export { default as capitalizeWords } from "@/utils/string/capitalizeWords";
