@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.33.0](https://github.com/getsoren/react-utils/compare/1.32.1...1.33.0) (2026-08-04)
+
+
+### Features
+
+* add capitalizeAddress ([9667869](https://github.com/getsoren/react-utils/commit/9667869c52a0ee5e028501307aa884716b0797f7))
+
 ## [1.32.1](https://github.com/getsoren/react-utils/compare/1.32.0...1.32.1) (2026-07-27)
 
 
