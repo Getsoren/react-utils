@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.34.0](https://github.com/getsoren/react-utils/compare/1.33.0...1.34.0) (2026-09-02)
+
+
+### Features
+
+* **storage:** improve functional updates to read current storage value ([69e21c8](https://github.com/getsoren/react-utils/commit/69e21c8b6efc8ec8482ec4b837dbbe6f254152f1))
+
 ## [1.33.0](https://github.com/getsoren/react-utils/compare/1.32.1...1.33.0) (2026-08-04)
 
 
