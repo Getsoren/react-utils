@@ -70,6 +70,12 @@ const useStorage = <T>(area: StorageArea, key: string, initialValue?: T, options
   /**
    * Return a wrapped version of useState's setter function that
    * persists the new value to storage.
+   *
+   * Functional updates are applied to what storage holds right now, not to this hook's own
+   * `storedValue`. Storage is shared by every hook reading the same key, while each of them
+   * keeps its own React copy that is only refreshed on the next render: updating from the
+   * local copy lets an instance that has not re-rendered yet write a stale snapshot over a
+   * value another instance has just committed.
    */
   const setValue: SetValue<T> = useEventCallback((value) => {
     if (IS_SERVER_SIDE) {
@@ -77,7 +83,8 @@ const useStorage = <T>(area: StorageArea, key: string, initialValue?: T, options
     }
 
     try {
-      const newValue = value instanceof Function ? value(storedValue) : value;
+      const newValue = value instanceof Function ? value(readValue()) : value;
+
       window[area].setItem(key, serializer(newValue));
       setStoredValue(newValue);
       window.dispatchEvent(new CustomEvent(customEvent, { detail: key }));

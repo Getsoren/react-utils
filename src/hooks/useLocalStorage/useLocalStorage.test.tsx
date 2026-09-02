@@ -122,6 +122,42 @@ describe("useLocalStorage()", () => {
     expect(B.current[0]).toBe("edited");
   });
 
+  test("[Event] A functional update reads what storage holds, not the hook's own copy", () => {
+    const { result } = renderHook(() => useLocalStorage("count", 1));
+
+    // Storage written behind the hook's back, as another instance of the same key does when it
+    // commits a value this one has not re-rendered with yet
+    window.localStorage.setItem("count", JSON.stringify(10));
+
+    act(() => {
+      const setState = result.current[1];
+      setState((prev) => prev + 1);
+    });
+
+    expect(result.current[0]).toBe(11);
+    expect(window.localStorage.getItem("count")).toEqual("11");
+  });
+
+  test("[Event] A functional update never writes a stale value over another hook's update", () => {
+    const initialValues: [string, { permissions: string[]; user: string }] = ["session", { permissions: [], user: "a" }];
+    const { result: A } = renderHook(() => useLocalStorage(...initialValues));
+    const { result: B } = renderHook(() => useLocalStorage(...initialValues));
+
+    // A switches the stored user, then B merges a field in: B must build on A's user, not on its own
+    act(() => {
+      const setState = A.current[1];
+      setState({ permissions: [], user: "b" });
+    });
+
+    act(() => {
+      const setState = B.current[1];
+      setState((previous) => ({ ...previous, permissions: ["read"] }));
+    });
+
+    expect(B.current[0]).toEqual({ permissions: ["read"], user: "b" });
+    expect(A.current[0]).toEqual({ permissions: ["read"], user: "b" });
+  });
+
   test("setValue is referentially stable", () => {
     const { result } = renderHook(() => useLocalStorage("count", 1));
 

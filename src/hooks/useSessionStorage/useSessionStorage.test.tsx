@@ -166,6 +166,22 @@ describe("useSessionStorage()", () => {
     expect(result.current[1] === originalCallback).toBe(true);
   });
 
+  test("[Event] A functional update reads what storage holds, not the hook's own copy", () => {
+    const { result } = renderHook(() => useSessionStorage("count", 1));
+
+    // Storage written behind the hook's back, as another instance of the same key does when it
+    // commits a value this one has not re-rendered with yet
+    window.sessionStorage.setItem("count", JSON.stringify(10));
+
+    act(() => {
+      const setState = result.current[1];
+      setState((prev) => prev + 1);
+    });
+
+    expect(result.current[0]).toBe(11);
+    expect(window.sessionStorage.getItem("count")).toEqual("11");
+  });
+
   test("initial state empty string return string", () => {
     const { result } = renderHook(() => useSessionStorage("test", ""));
 
