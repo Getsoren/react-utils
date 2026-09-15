@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.34.1](https://github.com/getsoren/react-utils/compare/1.34.0...1.34.1) (2026-09-15)
+
 ## [1.34.0](https://github.com/getsoren/react-utils/compare/1.33.0...1.34.0) (2026-09-02)
 
 
