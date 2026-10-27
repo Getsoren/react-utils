@@ -1,3 +1,5 @@
+import upperFirst from "@/utils/string/upperFirst/upperFirst";
+
 // Particles kept lowercase inside French (and common romance) place and street names.
 const PARTICLES = new Set([
   "a",
@@ -59,7 +61,7 @@ const capitalizeAddress = (value?: string | null): string | undefined => {
 
     isFirstWord = false;
 
-    return word.charAt(0).toUpperCase() + word.slice(1);
+    return upperFirst(word);
   });
 };
 
