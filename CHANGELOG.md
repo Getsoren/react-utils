@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.35.0](https://github.com/getsoren/react-utils/compare/1.34.3...1.35.0) (2026-10-27)
+
+
+### Features
+
+* add upperFirst utility function and refactor capitalize functions to use it ([d8868db](https://github.com/getsoren/react-utils/commit/d8868db96d4e4e0ceaba9b5e927fd3ab91882f17))
+
 ## [1.34.3](https://github.com/getsoren/react-utils/compare/1.34.2...1.34.3) (2026-09-30)
 
 ## [1.34.2](https://github.com/getsoren/react-utils/compare/1.34.1...1.34.2) (2026-09-30)
