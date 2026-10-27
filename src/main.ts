@@ -70,3 +70,5 @@ export * from "@/utils/string/capitalizeAddress/capitalizeAddress";
 export { default as capitalizeAddress } from "@/utils/string/capitalizeAddress/capitalizeAddress";
 export * from "@/utils/string/capitalizeWords";
 export { default as capitalizeWords } from "@/utils/string/capitalizeWords";
+export * from "@/utils/string/upperFirst/upperFirst";
+export { default as upperFirst } from "@/utils/string/upperFirst/upperFirst";

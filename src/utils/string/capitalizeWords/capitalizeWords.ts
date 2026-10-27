@@ -1,3 +1,5 @@
+import upperFirst from "@/utils/string/upperFirst/upperFirst";
+
 /**
  * Capitalize words in a given string
  * Example: capitalizeWords("hello world") -> "Hello World"
@@ -8,11 +10,7 @@ const capitalizeWords = (words?: unknown): string => {
     return "";
   }
 
-  return words
-    ?.toLowerCase()
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+  return words?.toLowerCase().split(" ").map(upperFirst).join(" ");
 };
 
 export default capitalizeWords;

@@ -341,10 +341,11 @@ getObjectValue(obj, 'car.color.red', 'not found');   // "not found"
 #### String Manipulation
 
 ```typescript
-import { capitalize, capitalizeWords } from '@getsoren/react-utils';
+import { capitalize, capitalizeWords, upperFirst } from '@getsoren/react-utils';
 
 capitalize('hello world');     // "Hello world"
 capitalizeWords('hello world'); // "Hello World"
+upperFirst('pEMP 12m');        // "PEMP 12m" — the rest kept as written, unlike capitalize
 ```
 
 #### Number Conversion
