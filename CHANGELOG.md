@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.36.0](https://github.com/getsoren/react-utils/compare/1.35.0...1.36.0) (2026-11-03)
+
+
+### Features
+
+* add normalizeSearch and getMimeType utils ([bb048e8](https://github.com/getsoren/react-utils/commit/bb048e898839210f58a82221c36359f76c35a833))
+
 ## [1.35.0](https://github.com/getsoren/react-utils/compare/1.34.3...1.35.0) (2026-10-27)
 
 
