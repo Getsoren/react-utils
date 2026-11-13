@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.37.0](https://github.com/getsoren/react-utils/compare/1.36.0...1.37.0) (2026-11-13)
+
+
+### Features
+
+* add useHasCamera hook to detect camera availability on touch devices ([00893dd](https://github.com/getsoren/react-utils/commit/00893dd4f5d3dde08759ba1e36915afcdec2e893))
+
 ## [1.36.0](https://github.com/getsoren/react-utils/compare/1.35.0...1.36.0) (2026-11-03)
 
 
