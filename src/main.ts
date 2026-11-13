@@ -8,6 +8,7 @@ export * from "@/hooks/useDocumentTitle/useDocumentTitle";
 export { default as useDocumentTitle } from "@/hooks/useDocumentTitle/useDocumentTitle";
 export * from "@/hooks/useEventListener/useEventListener";
 export { default as useEventListener } from "@/hooks/useEventListener/useEventListener";
+export { default as useHasCamera } from "@/hooks/useHasCamera/useHasCamera";
 export * from "@/hooks/useInputState/useInputState";
 export { default as useInputState } from "@/hooks/useInputState/useInputState";
 export * from "@/hooks/useIntersectionObserver/useIntersectionObserver";

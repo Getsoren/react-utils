@@ -202,6 +202,17 @@ setTitle('New Page');
 
 ---
 
+#### `useHasCamera()`
+Tells whether the device can take a photo from a file input: a touch device (phone, tablet) with a camera. A computer's webcam does not count, since browsers ignore `capture` there.
+
+```typescript
+const hasCamera = useHasCamera();
+
+{hasCamera && <input type="file" accept="image/*" capture="environment" />}
+```
+
+---
+
 #### `useEventListener(eventName, handler, element?, options?)`
 Adds event listeners with automatic cleanup.
 
