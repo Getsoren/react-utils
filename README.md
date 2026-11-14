@@ -370,6 +370,34 @@ toNumberOrZero(null);    // 0
 toNumberOrZero(true);    // 0 (booleans return 0)
 ```
 
+#### Decimal Input
+
+A decimal field holds its number with a point and shows it as the user's language writes it.
+
+```typescript
+import { formatDecimal, getDecimalSeparator, toDecimalInput } from '@getsoren/react-utils';
+
+// What the field keeps of what is typed: digits and one separator, a typed comma held as a point
+toDecimalInput('12,5');        // "12.5"
+toDecimalInput('12,345', 2);   // "12.34" — two decimals at most
+toDecimalInput('1 200 €');     // "1200"
+
+// What the field shows: the held or stored number, written as the language does
+formatDecimal('12.5', 'fr');   // "12,5"
+formatDecimal('12.', 'fr');    // "12," — while it is typed too
+formatDecimal('12.5', 'en');   // "12.5"
+formatDecimal('n/a', 'fr');    // "n/a" — any other text is kept as it is
+
+getDecimalSeparator('fr');     // ","
+getDecimalSeparator('en');     // "."
+
+<input
+  inputMode="decimal"
+  value={formatDecimal(amount, language)}
+  onChange={({ target }) => setAmount(toDecimalInput(target.value, 2))}
+/>
+```
+
 #### Platform Detection
 
 ```typescript
