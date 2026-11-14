@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.38.0](https://github.com/getsoren/react-utils/compare/1.37.0...1.38.0) (2026-11-14)
+
+
+### Features
+
+* add toDecimalInput, formatDecimal and getDecimalSeparator ([05b2df6](https://github.com/getsoren/react-utils/commit/05b2df601316b882148bc5c5cc4ddc05581e3ec0))
+
 ## [1.37.0](https://github.com/getsoren/react-utils/compare/1.36.0...1.37.0) (2026-11-13)
 
 
