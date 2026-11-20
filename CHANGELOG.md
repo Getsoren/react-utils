@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.39.0](https://github.com/getsoren/react-utils/compare/1.38.0...1.39.0) (2026-11-20)
+
+
+### Features
+
+* add scrollParentOf, scrollToMiddle and revealBelow ([113c378](https://github.com/getsoren/react-utils/commit/113c37888c06a2e3aad44c14b544e9b43a2dda6c))
+
 ## [1.38.0](https://github.com/getsoren/react-utils/compare/1.37.0...1.38.0) (2026-11-14)
 
 
