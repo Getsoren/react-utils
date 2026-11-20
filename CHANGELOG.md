@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.40.0](https://github.com/getsoren/react-utils/compare/1.39.0...1.40.0) (2026-11-20)
+
+
+### Features
+
+* add roundToHundredths, toReadableName and file helpers ([efa9f44](https://github.com/getsoren/react-utils/commit/efa9f44b01e4d260a57af75b1da97926ca254716))
+
 ## [1.39.0](https://github.com/getsoren/react-utils/compare/1.38.0...1.39.0) (2026-11-20)
 
 
