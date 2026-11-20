@@ -409,6 +409,23 @@ const shortcut = isMac() ? '⌘ + K' : 'Ctrl + K';
 
 **Returns:** `boolean` — `true` when running on macOS, `false` otherwise.
 
+#### Scrolling
+
+```typescript
+import { revealBelow, scrollParentOf, scrollToMiddle } from '@getsoren/react-utils';
+
+// The nearest ancestor whose content scrolls (overflow-y auto or scroll), null when only the page does
+const pane = scrollParentOf(row);
+
+// Centres a field in its scrolling pane; unlike scrollIntoView, a dialog's frame around it never moves
+scrollToMiddle(input);
+
+// Scrolls the pane just enough for a 320 px menu opened under the button to show in the window
+revealBelow(button, 320);
+```
+
+All three scroll smoothly and do nothing when only the page scrolls.
+
 ### 🔄 Adapters
 
 #### `phoneNumberAdapter(phoneNumber, options?)`
