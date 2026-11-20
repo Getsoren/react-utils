@@ -352,22 +352,35 @@ getObjectValue(obj, 'car.color.red', 'not found');   // "not found"
 #### String Manipulation
 
 ```typescript
-import { capitalize, capitalizeWords, upperFirst } from '@getsoren/react-utils';
+import { capitalize, capitalizeWords, toReadableName, upperFirst } from '@getsoren/react-utils';
 
 capitalize('hello world');     // "Hello world"
 capitalizeWords('hello world'); // "Hello World"
 upperFirst('pEMP 12m');        // "PEMP 12m" — the rest kept as written, unlike capitalize
+toReadableName('KILOUTOU - QUETIGNY [avec chauffeur]'); // "Kiloutou - Quetigny [avec chauffeur]" — notes and mixed case kept
 ```
 
 #### Number Conversion
 
 ```typescript
-import { toNumberOrZero } from '@getsoren/react-utils';
+import { roundToHundredths, toNumberOrZero } from '@getsoren/react-utils';
 
 toNumberOrZero('42');    // 42
 toNumberOrZero('abc');   // 0
 toNumberOrZero(null);    // 0
 toNumberOrZero(true);    // 0 (booleans return 0)
+roundToHundredths(106.255); // 106.26 — an amount to the cent
+```
+
+#### Files
+
+```typescript
+import { fileInputHandler, fileKeyOf, isDocumentFile, isPdfName } from '@getsoren/react-utils';
+
+isPdfName('bon.PDF');        // true — by its extension, whatever its case
+isDocumentFile(file);        // an image or a PDF, by its type or else its name
+fileKeyOf(file);             // "bon.pdf:1024:1700000000000" — the same each time the same file is picked
+<input type="file" onChange={fileInputHandler((files) => upload(files))} />; // emptied after, to pick the same files again
 ```
 
 #### Decimal Input
